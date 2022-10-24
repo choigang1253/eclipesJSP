@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>JSP 게시판 웹 사이트</title>
+<title>deleteAction.jsp</title>
 </head>
 <body>
 	<%
@@ -53,7 +53,7 @@
 			if(result == -1){
 				PrintWriter script = response.getWriter();
 				script.println("<script>");
-				script.println("alert('글 수정하기에 실패했습니다')");
+				script.println("alert('글 삭제에 실패했습니다')");
 				script.println("history.back()");
 				script.println("</script>");
 			// 글 삭제가 정상적으로 실행되면 알림창을 띄우고 게시판 메인으로 이동한다

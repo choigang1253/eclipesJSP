@@ -4,13 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>hello world!</title>
+<title>Insert title here</title>
 </head>
 <body>
-<!-- 인덱스 페이지에 접속한 모든 접속자들을 모두 로그인 화면으로 강제적으로 이동하게함 -->
+	<% session.invalidate(); %>
 	<script>
-		location.html = "login.jsp"
+		alert('로그아웃 되었습니다.');
+		location.href="main.jsp";
 	</script>
-	
+
 </body>
 </html>

@@ -22,6 +22,7 @@
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('입력이 안 된 사항이 있습니다')");
+			// history.back(); -> 이전 페이지로 돌아가기  //
 			script.println("history.back()");
 			script.println("</script>");
 		}else{

@@ -47,14 +47,18 @@ public class UserDAO {
 		}
 		
 		public int join(User user) {
+			//'user'테이블에 데이터를 입력하는 쿼리문 //
 			  String sql = "insert into user values(?, ?, ?, ?, ?)";
 			  try {
+				//'sql'쿼리문을 대기 시킴 //
 			    pstmt = conn.prepareStatement(sql);
+			    // '1'번째 물음표에 실제 사용자가 입력한 'UserID'를 셋팅 //
 			    pstmt.setString(1, user.getUserID());
 			    pstmt.setString(2, user.getUserPassword());
 			    pstmt.setString(3, user.getUserName());
 			    pstmt.setString(4, user.getUserGender());
 			    pstmt.setString(5, user.getUserEmail());
+			    // 'sql'  쿼리문의 결과에 int 타입의 값을 반환한다
 			    return pstmt.executeUpdate();
 			  }catch (Exception e) {
 			 	e.printStackTrace();
